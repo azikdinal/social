@@ -2,13 +2,13 @@ import React, {FC} from 'react';
 
 interface RowProps {
     name: string,
-    link: string
+    path: string
 }
 
-const Row : FC<RowProps> = ({name, link}) => {
+const Row: FC<RowProps> = ({name, path}) => {
     return (
         <div className='mt-2 hover:bg-gray-600 p-2 rounded'>
-            <a href={link}>{name}</a>
+            <a className='h-full w-full' href={path}>{name}</a>
         </div>
     );
 };

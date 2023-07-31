@@ -1,20 +1,20 @@
-import React from 'react';
-import Row from "./Row";
+import React, { FC } from 'react';
+import Row from './Row';
 
-const rows = [
-    {text: "Friends", link: '#friends'},
-    {text: "Communities", link: '#communities'},
-    {text: "Messages", link: '#messages'},
-    {text: "Photos", link: '#photos'},
-    {text: "Music", link: '#music'},
-    {text: "Videos", link: '#videos'},
-]
+interface Service {
+    path: string;
+    text: string;
+}
 
-const SideBar = () => {
+interface SideBarProps {
+    services: Service[];
+}
+
+const SideBar: FC<SideBarProps> = ({ services }) => {
     return (
         <ul className='ml-[200px]'>
-            {rows.map((row, index) => (
-                <Row link={row.link} name={row.text} key={index}/>
+            {services.map((row, index) => (
+                <Row path={row.path} name={row.text} key={index} />
             ))}
         </ul>
     );
