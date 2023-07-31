@@ -7,7 +7,7 @@ interface ButtonProps {
 
 const Button : FC<ButtonProps> = ({children , customStyles}) => {
     return (
-        <div className={`cursor-pointer rounded-md h-[30px] w-[100px] bg-gray-800 hover:bg-gray-600 text-white flex items-center justify-center ${customStyles}`}>
+        <div className={`cursor-pointer rounded-md h-[30px] w-auto bg-gray-800 hover:bg-gray-600 text-white flex items-center justify-center p-2 ${customStyles}`}>
             <button>
                 {children}
             </button>
