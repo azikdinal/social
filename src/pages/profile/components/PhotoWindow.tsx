@@ -1,6 +1,6 @@
 import React from 'react';
-import photo from '../../assets/photo.jpeg'
-import Button from "../../components/UI/Button";
+import photo from '../../../assets/photo.jpeg'
+import Button from "../../../components/UI/Button";
 const PhotoWindow = () => {
     const imgStyle = 'h-[160px] mt-1 ml-1'
     return (

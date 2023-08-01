@@ -1,5 +1,5 @@
 import React, {createElement} from 'react';
-import ProfilePage from "./Profile/ProfilePage";
+import ProfilePage from "./pages/profile/ProfilePage";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
@@ -35,7 +35,7 @@ function App() {
     return (
         <>
             <NavBar/>
-            <div className='flex mt-2'>
+            <div className='flex mt-4 ml-[200px] mr-[200px]'>
                 <SideBar services={services}/>
                 <RouterProvider router={router}/>
             </div>

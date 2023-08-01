@@ -1,6 +1,6 @@
 import React from 'react';
-import profile from "../../assets/profile.jpg";
-import post_img from "../../assets/video_img.jpg";
+import profile from "../../../assets/profile.jpg";
+import post_img from "../../../assets/video_img.jpg";
 
 const Post = () => {
     return (

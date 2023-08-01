@@ -1,5 +1,5 @@
 import React from 'react';
-import group_photo from '../../assets/group_photo.jpg'
+import group_photo from '../../../assets/group_photo.jpg'
 
 const SubscriptionWindow = () => {
     return (

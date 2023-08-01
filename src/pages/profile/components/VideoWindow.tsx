@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import video_img from '../../assets/video_img.jpg'
-import ScrollButton from "../../components/UI/ScrollButton";
+import video_img from '../../../assets/video_img.jpg'
+import ScrollButton from "../../../components/UI/ScrollButton";
 
 const VideoWindow = () => {
     const [leftPosition, setLeftPosition] = useState(0);

@@ -1,7 +1,7 @@
 import React from 'react';
-import profile from "../../assets/profile.jpg";
-import Button from "../../components/UI/Button";
-import cover from '../../assets/cover.jpg'
+import profile from "../../../assets/profile.jpg";
+import Button from "../../../components/UI/Button";
+import cover from '../../../assets/cover.jpg'
 
 const Cover = () => {
     return (

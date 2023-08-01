@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from "../../components/UI/Button";
-import profile from '../../assets/profile.jpg'
-import post_img from '../../assets/video_img.jpg'
+import Button from "../../../components/UI/Button";
+import profile from '../../../assets/profile.jpg'
+import post_img from '../../../assets/video_img.jpg'
 import Post from "./Post";
 
 const PostList = () => {

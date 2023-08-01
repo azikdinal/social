@@ -12,7 +12,7 @@ interface SideBarProps {
 
 const SideBar: FC<SideBarProps> = ({ services }) => {
     return (
-        <ul className='ml-[200px]'>
+        <ul className=''>
             {services.map((row, index) => (
                 <Row path={row.path} name={row.text} key={index} />
             ))}
