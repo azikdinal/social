@@ -1,10 +1,18 @@
-import React from 'react';
-import profile from "../../../assets/profile.jpg";
-import post_img from "../../../assets/video_img.jpg";
+import React, {FC} from 'react';
+import profile from "../assets/profile.jpg";
+import post_img from "../assets/video_img.jpg";
+import PostList from "./PostList";
 
-const Post = () => {
+interface PostProps {
+    width?: string
+    bg_color?: string
+    text_color?: string
+}
+
+const Post: FC<PostProps> = ({width, bg_color, text_color}) => {
     return (
-        <div className='h-auto w-[500px] rounded-xl bg-gray-600 mt-2 p-4 text-white'>
+        <div className='h-auto rounded-xl mt-2 p-4 bg-white'
+             style={{width: width, backgroundColor: bg_color, color: text_color}}>
             <div className='flex flex-row '>
                 <a href="#" className=''><img className='h-12 w-12 object-cover rounded-full' src={profile}
                                               alt="profile"/></a>
@@ -29,5 +37,6 @@ const Post = () => {
         </div>
     );
 };
+
 
 export default Post;

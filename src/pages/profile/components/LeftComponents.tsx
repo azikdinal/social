@@ -1,6 +1,6 @@
 import React from 'react';
 import PhotoWindow from "./PhotoWindow";
-import PostList from "./PostList";
+import PostList from "../../../components/PostList";
 
 const LeftComponents = () => {
     return (

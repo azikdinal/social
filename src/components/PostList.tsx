@@ -1,18 +1,25 @@
-import React from 'react';
-import Button from "../../../components/UI/Button";
-import profile from '../../../assets/profile.jpg'
-import post_img from '../../../assets/video_img.jpg'
+import React, {FC} from 'react';
+import Button from "./UI/Button";
+import profile from '../assets/profile.jpg'
+import post_img from '../assets/video_img.jpg'
 import Post from "./Post";
 
-const PostList = () => {
+interface PostListProps {
+    width?: string
+    bg_color?: string
+    text_color?: string
+}
+
+const PostList: FC<PostListProps> = ({width, bg_color, text_color}) => {
     return (
         <>
-            <div className='bg-gray-500 h-auto w-[500px] rounded-xl overflow-hidden mt-4'>
-                <div className='bg-gray-600 h-auto flex flex-row p-4 border-1'>
+            <div className={`h-auto rounded-xl overflow-hidden mt-4 `}
+                 style={{width: width, color: text_color}}>
+                <div className='h-auto flex flex-row p-4 border-1'  style={{backgroundColor:bg_color}}>
                     <Button customStyles=''>All posts</Button>
                     <Button customStyles='ml-2'>Azamat's posts</Button>
                 </div>
-                <div className='h-auto bg-gray-600 mt-[0.1rem] p-4 text-white'>
+                <div className='h-auto mt-[0.1rem] p-4' style={{backgroundColor:bg_color}}>
                     <div className='flex flex-row '>
                         <a href="#" className=''><img className='h-12 w-12 object-cover rounded-full' src={profile}
                                                       alt="profile"/></a>
@@ -37,11 +44,18 @@ const PostList = () => {
                     </div>
                 </div>
             </div>
-            <Post/>
-            <Post/>
-            <Post/>
+            <Post width={width} bg_color={bg_color} text_color={text_color}/>
+            <Post width={width} bg_color={bg_color} text_color={text_color}/>
+            <Post width={width} bg_color={bg_color} text_color={text_color}/>
         </>
     );
 };
+
+
+PostList.defaultProps = {
+    width: "500px",
+    bg_color: "white",
+    text_color: "black",
+}
 
 export default PostList;
